@@ -301,8 +301,9 @@ public class JDGObserver extends javax.swing.JDialog {
                 }
                 lstGrupoMembros.setModel(modeloGrupo);
             }
-
-//            txtGrupoUltimaMensagem.setText(grupo.getUltimaMensagem().getMensagem());
+            if (grupo.getUltimaMensagem() != null) {
+                txtGrupoUltimaMensagem.setText(grupo.getUltimaMensagem().toString());
+            }
         }
     }
     private void lstUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lstUsuarioMouseClicked
@@ -314,7 +315,6 @@ public class JDGObserver extends javax.swing.JDialog {
             usuario = (Usuario) listaUsuarios.get(lstUsuario.getSelectedIndex());
 
             txtUsuarioUltimaMensagem.setText(usuario.getUltimaNotificacao());
-
         }
     }
     private void btnEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnviarActionPerformed

@@ -22,10 +22,10 @@ public class Mensagem implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer idMensagem;
-    private String mensagem;
+    private String mensagem = "";
 
     @ManyToOne(targetEntity = Usuario.class)
-    private Usuario usuario;
+    private Usuario usuario = null;
 
     public Mensagem() {
     }
@@ -49,6 +49,11 @@ public class Mensagem implements Serializable {
 
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
+    }
+
+    @Override
+    public String toString() {
+        return usuario + ": " + mensagem;
     }
 
 }

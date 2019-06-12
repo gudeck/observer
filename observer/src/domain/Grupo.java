@@ -14,7 +14,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
-import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 /**
@@ -37,11 +36,9 @@ public class Grupo implements Serializable {
 //    ArrayList<Mensagem> listaMensagens;
 
     public Grupo() {
-        this.ultimaMensagem = new Mensagem(" ", null);
     }
 
     public Grupo(String nome) {
-        this.ultimaMensagem = new Mensagem(" ", null);
         this.nome = nome;
         this.listaUsuarios = new ArrayList<>();
         this.ultimaMensagem = null;

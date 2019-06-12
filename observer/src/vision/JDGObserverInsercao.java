@@ -205,6 +205,7 @@ public class JDGObserverInsercao extends javax.swing.JDialog {
     private void lstUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lstUsuarioMouseClicked
 
         if (lstUsuario.getSelectedIndex() >= 0) {
+            usuariosParaoBanco.clear();
             for (int i : lstUsuario.getSelectedIndices()) {
                 usuariosParaoBanco.add(usuariosDoBanco.get(i));
             }
